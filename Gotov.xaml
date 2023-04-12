@@ -1,0 +1,42 @@
+﻿<Window x:Class="Itogoviy_praktos.Gotov"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Itogoviy_praktos"
+        mc:Ignorable="d"
+        Title="Gotov" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="72*"></RowDefinition>
+            <RowDefinition Height="72*"></RowDefinition>
+            <RowDefinition Height="72*"></RowDefinition>
+            <RowDefinition Height="72*"></RowDefinition>
+            <RowDefinition Height="72*"></RowDefinition>
+            <RowDefinition Height="31*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Button Content="Назад" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Height="60" Width="180" Click="Button_Click"/>
+        <DataGrid x:Name="KompTabl" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="3" Margin="0,0,0,80" Grid.RowSpan="4"/>
+        <Button x:Name="Dobav" Content="Добавить" HorizontalAlignment="Left" FontSize="20" Grid.Row="4" VerticalAlignment="Center" Height="60" Width="190" Click="Dobav_Click"/>
+        <Button x:Name="Ydalenie" Grid.Column="1" Content="Удалить" FontSize="20" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="60" Width="180" Click="Ydalenie_Click"/>
+        <Button x:Name="Izmenenie" Grid.Column="2" Content="Изменить" FontSize="20" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" Height="60" Width="180" Click="Izmenenie_Click"/>
+        <ComboBox x:Name="MatC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectionChanged="MatC_SelectionChanged"/>
+        <ComboBox x:Name="BPC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,48,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectionChanged="BPC_SelectionChanged"/>
+        <ComboBox x:Name="VidC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectionChanged="VidC_SelectionChanged"/>
+        <ComboBox x:Name="OpC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,41,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectionChanged="OpC_SelectionChanged"/>
+        <ComboBox x:Name="PoC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="120" SelectionChanged="PoC_SelectionChanged"/>
+        <ComboBox x:Name="ProcC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,0,0,0" Grid.Row="3" VerticalAlignment="Center" Width="120" SelectionChanged="ProcC_SelectionChanged"/>
+        <ComboBox x:Name="OhC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="120" Grid.RowSpan="2" SelectionChanged="OhC_SelectionChanged"/>
+        <ComboBox x:Name="GarC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,18,0,0" Grid.Row="4" VerticalAlignment="Top" Width="120" SelectionChanged="GarC_SelectionChanged"/>
+        <ComboBox x:Name="KorpC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,58,0,0" VerticalAlignment="Top" Width="120" Grid.RowSpan="2" SelectionChanged="KorpC_SelectionChanged"/>
+        <ComboBox x:Name="NakC" Grid.Column="3" HorizontalAlignment="Left" Margin="33,48,0,0" Grid.Row="4" VerticalAlignment="Top" Width="120" SelectionChanged="NakC_SelectionChanged"/>
+        <TextBlock Grid.Column="3" HorizontalAlignment="Left" FontSize="20"  TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="180" Margin="3,14,0,0"><Run Language="ru-ru" Text="Комплектующие"/></TextBlock>
+    </Grid>
+</Window>
